@@ -826,12 +826,13 @@ strong {
 
 .lightbox-art {
   position: relative;
-  min-height: 420px;
-  border-radius: 22px;
+  min-height: 220px;
+  border-radius: 22px 22px 0 0;
   background:
     linear-gradient(135deg, rgba(45, 89, 69, 0.15), rgba(127, 166, 138, 0.2)),
     linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(223, 233, 225, 0.7));
   border: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0;
   display: grid;
   place-items: center;
   padding: 1.5rem;
@@ -885,6 +886,64 @@ strong {
 
 .lightbox-art.no-image #lightbox-placeholder {
   display: block;
+}
+
+.lightbox-metric-panel {
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(213, 221, 211, 0.95);
+  border-top: 0;
+  border-radius: 0 0 22px 22px;
+  padding: 1.2rem 1rem 1.1rem;
+}
+
+.lightbox-metric-heading {
+  margin: 0 0 0.8rem;
+  color: var(--forest-deep);
+  font-size: 1.1rem;
+}
+
+.lightbox-metric-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.lightbox-metric-item {
+  display: block;
+}
+
+.lightbox-metric-link,
+.lightbox-metric-button {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.8rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(127, 166, 138, 0.08);
+  color: var(--forest);
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-metric-link:hover,
+.lightbox-metric-link:focus-visible,
+.lightbox-metric-button:hover,
+.lightbox-metric-button:focus-visible {
+  border-color: var(--forest);
+  transform: translateY(-1px);
+}
+
+.lightbox-empty {
+  margin: 0;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  background: rgba(127, 166, 138, 0.08);
+  color: var(--text-soft);
 }
 
 @media (max-width: 960px) {
@@ -982,3 +1041,296 @@ strong {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.duplicate { }

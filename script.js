@@ -1,139 +1,466 @@
-const navToggle = document.querySelector(".nav-toggle");
-const siteNav = document.querySelector(".site-nav");
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Lucila Comunicación - Social Media Manager, Community Manager y Licenciada en Comunicación Social (UNLP)."
+    />
+    <title>Lucila | Social Media Manager</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#inicio" aria-label="Ir al inicio">
+          <span class="brand-mark">L</span>
+          <span class="brand-copy">
+            <strong>Lucila</strong>
+            <small>Comunicación</small>
+          </span>
+        </a>
 
-if (navToggle && siteNav) {
-  const syncNavButton = () => {
-    const isOpen = siteNav.classList.contains("is-open");
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-    navToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
-  };
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Abrir menú"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-  navToggle.addEventListener("click", () => {
-    siteNav.classList.toggle("is-open");
-    syncNavButton();
-  });
+        <nav class="site-nav" id="site-nav" aria-label="Navegación principal">
+          <a href="#inicio">Inicio</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#formacion">Formación</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
 
-  siteNav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      siteNav.classList.remove("is-open");
-      syncNavButton();
-    });
-  });
-}
+        <a class="button button-primary nav-cta" href="#contacto">Hablemos</a>
+      </div>
+    </header>
 
-const projectCards = document.querySelectorAll(".project-card");
-projectCards.forEach((card) => {
-  const btn = card.querySelector(".expand-btn");
-  btn?.addEventListener("click", () => {
-    const isOpen = card.classList.toggle("is-open");
-    btn.setAttribute("aria-expanded", String(isOpen));
-    btn.textContent = isOpen ? "Ocultar detalles" : "Ver detalles";
-  });
-});
+    <main>
+      <section class="hero" id="inicio">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1>¡Hola, soy Lucila!</h1>
+            <p class="lead">
+              Social Media Manager, Community Manager y Licenciada en Comunicación Social (UNLP).
+            </p>
+            <p class="lead lead-strong">
+              Mi objetivo es ayudarte a construir, gestionar y hacer crecer la presencia de tu negocio en redes
+              sociales a través de una estrategia clara, creativa y auténtica.
+            </p>
 
-const lightbox = document.getElementById("lightbox");
-const lightboxArt = document.querySelector(".lightbox-art");
-const lightboxImage = document.getElementById("lightbox-image");
-const lightboxTitle = document.getElementById("lightbox-title");
-const lightboxPlaceholder = document.getElementById("lightbox-placeholder");
-const lightboxClose = document.querySelector(".lightbox-close");
-const projectImages = document.querySelectorAll(".project-image");
-const resourceButtons = document.querySelectorAll(".resource-link");
+            <div class="hero-actions">
+              <a class="button button-primary" href="#portfolio">Ver portfolio</a>
+              <a class="button button-secondary" href="#contacto">Contactame</a>
+            </div>
+          </div>
 
-let lastFocusedElement = null;
+          <div class="hero-visual" aria-label="Video principal">
+            <div class="video-box">
+              <div class="video-placeholder">
+                <span>Video real del inicio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-const openLightbox = (projectName, imageSource = "") => {
-  if (!lightbox || !lightboxArt || !lightboxImage || !lightboxTitle) {
-    return;
-  }
+      <section class="section section-soft" id="portfolio">
+        <div class="container">
+          <div class="section-heading compact">
+            <h2>Proyectos</h2>
+          </div>
 
-  lightboxTitle.textContent = projectName;
+          <div class="portfolio-grid">
+            <article class="project-card">
+              <div class="project-visual">
+                <button
+                  class="project-image"
+                  type="button"
+                  data-project="La Casa del Plotter"
+                  data-image=""
+                  aria-label="Ampliar recurso de La Casa del Plotter"
+                >
+                  <span>La Casa del Plotter</span>
+                </button>
+              </div>
 
-  if (imageSource) {
-    lightboxImage.src = imageSource;
-    lightboxImage.alt = projectName;
-    lightboxArt.classList.add("has-image");
-    lightboxArt.classList.remove("no-image");
-    if (lightboxPlaceholder) {
-      lightboxPlaceholder.style.display = "none";
-    }
-  } else {
-    lightboxImage.removeAttribute("src");
-    lightboxImage.alt = "";
-    lightboxArt.classList.remove("has-image");
-    lightboxArt.classList.add("no-image");
-    if (lightboxPlaceholder) {
-      lightboxPlaceholder.style.display = "block";
-    }
-  }
+              <div class="project-body">
+                <h3>La Casa del Plotter</h3>
 
-  lightbox.classList.add("is-open");
-  lightbox.setAttribute("aria-hidden", "false");
+                <p>
+                  <strong>Descripción:</strong> diseños personalizados con plotter y vinilo para cumpleaños, negocios,
+                  eventos y decoración.
+                </p>
 
-  if (lightboxClose) {
-    lightboxClose.focus();
-  }
-};
+                <button class="expand-btn" type="button" aria-expanded="false">Ver detalles</button>
 
-projectImages.forEach((button) => {
-  button.addEventListener("click", () => {
-    lastFocusedElement = button;
-    const projectName = button.dataset.project || "Proyecto";
-    const imageSource = button.dataset.image || "";
+                <div class="project-details">
+                  <p><strong>Tareas realizadas:</strong></p>
+                  <ul class="detail-list">
+                    <li>Diagnóstico y optimización del perfil.</li>
+                    <li>Planificación de estrategia y calendario de contenidos.</li>
+                    <li>Creación de contenido en el lugar.</li>
+                    <li>Definición de tipografía.</li>
+                    <li>Gestión de Instagram.</li>
+                    <li>Diseño de posteos e historias.</li>
+                    <li>Edición de video en CapCut (Reels).</li>
+                    <li>Redacción de copys.</li>
+                    <li>Análisis de métricas y resultados.</li>
+                  </ul>
 
-    openLightbox(projectName, imageSource);
-  });
-});
+                  <div class="resources">
+                    <button
+                      class="resource-link metrics-button"
+                      type="button"
+                      data-project="La Casa del Plotter"
+                      data-image=""
+                      data-metrics='[{"label":"Antes y después del perfil","url":""},{"label":"Estadísticas de un Reel","url":""},{"label":"Balance mensual","url":""}]'
+                    >
+                      Métricas
+                    </button>
+                  </div>
 
-resourceButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    lastFocusedElement = button;
-    const projectName = button.dataset.project || "Proyecto";
-    const resourceName = button.dataset.resource || "Recurso";
-    const imageSource = button.dataset.image || "";
+                  <p class="project-link">
+                    <strong>Instagram:</strong>
+                    <a href="https://www.instagram.com/lacasadelplotter/" target="_blank" rel="noopener noreferrer">
+                      @lacasadelplotter
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </article>
 
-    openLightbox(`${projectName} — ${resourceName}`, imageSource);
-  });
-});
+            <article class="project-card">
+              <div class="project-visual">
+                <button
+                  class="project-image"
+                  type="button"
+                  data-project="Iconic Teen"
+                  data-image=""
+                  aria-label="Ampliar recurso de Iconic Teen"
+                >
+                  <span>Iconic Teen</span>
+                </button>
+              </div>
 
-const closeLightbox = () => {
-  if (!lightbox) return;
+              <div class="project-body">
+                <h3>Iconic Teen</h3>
 
-  lightbox.classList.remove("is-open");
-  lightbox.setAttribute("aria-hidden", "true");
+                <p>
+                  <strong>Descripción:</strong> tienda de ropa infantil y juvenil.
+                </p>
+                <button class="expand-btn" type="button" aria-expanded="false">Ver detalles</button>
 
-  if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
-    lastFocusedElement.focus();
-  }
-};
+                <div class="project-details">
+                  <p><strong>Tareas realizadas:</strong></p>
+                  <ul class="detail-list">
+                    <li>Diagnóstico y optimización del perfil.</li>
+                    <li>Planificación de estrategia y calendario de contenido.</li>
+                    <li>Gestión de Instagram.</li>
+                    <li>Diseño de posteos e historias.</li>
+                    <li>Edición de video en CapCut (Reels).</li>
+                    <li>Redacción de copys y hashtags.</li>
+                    <li>Análisis de métricas y resultados.</li>
+                  </ul>
 
-lightboxClose?.addEventListener("click", closeLightbox);
+                  <div class="resources">
+                    <button
+                      class="resource-link metrics-button"
+                      type="button"
+                      data-project="Iconic Teen"
+                      data-image=""
+                      data-metrics='[{"label":"Comparación del perfil antes y después","url":""}]'
+                    >
+                      Métricas
+                    </button>
+                  </div>
 
-lightbox?.addEventListener("click", (event) => {
-  if (event.target === lightbox) {
-    closeLightbox();
-  }
-});
+                  <p class="project-link">
+                    <strong>Instagram:</strong>
+                    <a href="https://www.instagram.com/iconicteenmodajuvenil" target="_blank" rel="noopener noreferrer">
+                      @iconicteenmodajuvenil
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </article>
 
-document.addEventListener("keydown", (event) => {
-  if (!lightbox || !lightbox.classList.contains("is-open")) return;
+            <article class="project-card">
+              <div class="project-visual">
+                <button
+                  class="project-image"
+                  type="button"
+                  data-project="Mi marca personal"
+                  data-image=""
+                  aria-label="Ampliar recurso de Mi marca personal"
+                >
+                  <span>Mi marca personal</span>
+                </button>
+              </div>
 
-  if (event.key === "Escape") {
-    closeLightbox();
-    return;
-  }
+              <div class="project-body">
+                <h3>Mi marca personal</h3>
 
-  if (event.key === "Tab" && lightboxClose) {
-    const focusable = [lightboxClose];
-    const first = focusable[0];
-    const last = focusable[focusable.length - 1];
+                <p>
+                  <strong>Instagram:</strong>
+                  <a href="https://www.instagram.com/lucila.comunicacion/" target="_blank" rel="noopener noreferrer">
+                    @lucila.comunicacion
+                  </a>
+                  <br />
+                  <strong>TikTok:</strong>
+                  <a href="https://www.tiktok.com/@lucila.comunicacion/" target="_blank" rel="noopener noreferrer">
+                    @lucila.comunicacion
+                  </a>
+                </p>
 
-    if (event.shiftKey && document.activeElement === first) {
-      event.preventDefault();
-      last.focus();
-    } else if (!event.shiftKey && document.activeElement === last) {
-      event.preventDefault();
-      first.focus();
-    }
-  }
-});
+                <button class="expand-btn" type="button" aria-expanded="false">Ver detalles</button>
+
+                <div class="project-details">
+                  <p><strong>Tareas realizadas:</strong></p>
+                  <ul class="detail-list">
+                    <li>Creación de mi marca personal.</li>
+                    <li>Planificación de estrategia y calendario de contenidos.</li>
+                    <li>Gestión de Instagram.</li>
+                    <li>Diseño de posteos e historias.</li>
+                    <li>Creación y edición de video en CapCut (Reels y TikToks).</li>
+                    <li>Redacción de copys.</li>
+                    <li>Análisis de métricas y resultados.</li>
+                  </ul>
+
+                  <div class="resources">
+                    <button
+                      class="resource-link metrics-button"
+                      type="button"
+                      data-project="Mi marca personal"
+                      data-image=""
+                      data-metrics='[{"label":"Resumen de métricas de Instagram","url":""},{"label":"Estadísticas de un TikTok","url":""}]'
+                    >
+                      Métricas
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="servicios">
+        <div class="container">
+          <div class="section-heading compact">
+            <p class="eyebrow">Cómo trabajo</p>
+            <h2>Un proceso claro, estratégico y cercano.</h2>
+          </div>
+
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-number">01</span>
+              <h3>Conozco tu negocio</h3>
+              <p>Entiendo tu marca, tus objetivos y las necesidades reales de tu negocio para identificar el punto de partida.</p>
+            </article>
+
+            <article class="step-card">
+              <span class="step-number">02</span>
+              <h3>Planifico la estrategia</h3>
+              <p>Defino una ruta clara con objetivos, mensajes, tono y eje editorial para que cada contenido tenga sentido.</p>
+            </article>
+
+            <article class="step-card">
+              <span class="step-number">03</span>
+              <h3>Creo el contenido</h3>
+              <p>Diseño, redacto y edito piezas para que tus redes se vean coherentes, relevantes y auténticas.</p>
+            </article>
+
+            <article class="step-card">
+              <span class="step-number">04</span>
+              <h3>Analizo los resultados</h3>
+              <p>Reviso métricas y feedback para ajustar la estrategia, mejorar el rendimiento y sostener el crecimiento.</p>
+            </article>
+          </div>
+
+          <div class="section-heading compact" style="margin-top: 2.5rem;">
+            <p class="eyebrow">Servicios</p>
+          </div>
+
+          <div class="service-panel">
+            <div class="service-block">
+              <h3>Gestión integral de Instagram</h3>
+              <ul class="check-list">
+                <li>Diagnóstico y optimización del perfil.</li>
+                <li>Estrategia y planificación de contenidos.</li>
+                <li>Calendario mensual de publicaciones.</li>
+                <li>Diseño de publicaciones e historias.</li>
+                <li>Edición de Reels.</li>
+                <li>Redacción de copys y hashtags estratégicos.</li>
+                <li>Gestión de la comunidad.</li>
+                <li>Análisis de métricas y resultados.</li>
+              </ul>
+            </div>
+
+            <div class="service-block">
+              <h3>Servicios por separado</h3>
+              <ul class="check-list">
+                <li>Edición de Reels de hasta un minuto.</li>
+                <li>Packs de edición de 10 videos.</li>
+                <li>Diseño de publicaciones y edición de piezas gráficas.</li>
+                <li>Diseño de carruseles de 3 a 10 placas.</li>
+                <li>Diseño de flyers e historias.</li>
+                <li>Optimización del perfil de Instagram (tipografía, destacados, colores y recursos visuales).</li>
+                <li>Creación de contenido presencial por hora.</li>
+                <li>Asesorías personalizadas.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="formacion">
+        <div class="container">
+          <div class="section-heading compact">
+            <p class="eyebrow">Formación</p>
+            <h2>Mi formación</h2>
+          </div>
+
+          <div class="training-feature">
+            <div class="training-main">
+              <div>
+                <h3>Licenciatura en Comunicación Social</h3>
+                <p>Orientación en Planificación</p>
+                <p>Universidad Nacional de La Plata (UNLP)</p>
+                <p>2015–2026</p>
+              </div>
+            </div>
+
+            <div class="training-list-wrap">
+              <h4>Otros cursos y certificaciones</h4>
+              <ul class="course-list">
+                <li><strong>Conceptos básicos del Marketing Digital</strong><span> — Google Actívate · 2020</span></li>
+                <li><strong>Copywriting para redes sociales</strong><span> — Domestika · 2022</span></li>
+                <li><strong>Certificación de Google Analytics</strong><span> — Google Digital Academy (Skillshop) · 2026</span></li>
+                <li><strong>Graphic Design Essentials</strong><span> — Canva Design School · 2026</span></li>
+                <li><strong>Convertite en Community Manager</strong><span> — Juliana Comunidad · 2026</span></li>
+                <li><strong>Certificación de Marketing en redes sociales</strong><span> — HubSpot Academy · 2026</span></li>
+                <li><strong>Marketing de contenido</strong><span> — Luzzi Digital · 2026</span></li>
+                <li><strong>Storytelling en el Marketing Digital</strong><span> — Universidad de Chicago y Santander Open Academy · 2026</span></li>
+                <li><strong>Publicidad en redes sociales</strong><span> — Santander Open Academy · 2026</span></li>
+                <li><strong>SEO y Content Marketing</strong><span> — Santander Open Academy · 2026</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contacto">
+        <div class="container contact-wrap">
+          <div class="contact-copy">
+            <p class="eyebrow">Contacto</p>
+            <h2>¡Trabajemos junt@s!</h2>
+            <p>
+              Si te gusta mi propuesta de trabajo y querés empezar a delegar la gestión de tus redes, escribime. Me
+              encantaría conocer tu marca y saber cómo puedo ayudarte.
+            </p>
+            <p>
+              ¿Querés que conozca mejor tu negocio? Completá este breve formulario con información sobre tu marca, tus
+              objetivos y lo que necesitás comunicar.
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <a class="contact-link" href="mailto:abalolucila@gmail.com">Email</a>
+
+            <a
+              class="contact-link secondary"
+              href="https://www.instagram.com/lucila.comunicacion/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </a>
+
+            <a
+              class="contact-link secondary"
+              href="https://www.tiktok.com/@lucila.comunicacion/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              TikTok
+            </a>
+
+            <a
+              class="contact-link secondary"
+              href="https://wa.me/542345444904"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp
+            </a>
+
+            <a
+              class="contact-link tertiary"
+              href="https://forms.gle/bMLRyDx2KsoAYUaKA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Completar formulario
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>© 2026 Lucila</p>
+        <div class="footer-links">
+          <a href="https://www.instagram.com/lucila.comunicacion/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.tiktok.com/@lucila.comunicacion/" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a href="mailto:abalolucila@gmail.com">Correo</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/542345444904"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Hablemos de tu proyecto"
+    >
+      Hablemos de tu proyecto
+    </a>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <button class="lightbox-close" type="button" aria-label="Cerrar vista ampliada">×</button>
+      <div class="lightbox-panel" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+        <div class="lightbox-art no-image">
+          <img id="lightbox-image" src="" alt="Vista ampliada del recurso" />
+          <span id="lightbox-title">Proyecto</span>
+          <span id="lightbox-placeholder">Espacio para imagen real</span>
+        </div>
+        <div class="lightbox-metric-panel" aria-live="polite">
+          <h3 class="lightbox-metric-heading">Métricas</h3>
+          <div id="lightbox-metric-list" class="lightbox-metric-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
