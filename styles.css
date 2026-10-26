@@ -962,3 +962,138 @@ strong {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* =================================
+   TIPOGRAFÍA GENERAL
+================================= */
+
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.brand strong,
+.brand-mark {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* =================================
+   TÍTULOS: TAMAÑO Y ESPACIADO
+================================= */
+
+h1 {
+  font-size: clamp(2.5rem, 4.5vw, 3.8rem);
+  line-height: 1.18;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.4rem;
+}
+
+h2 {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  line-height: 1.35;
+}
+
+.brand strong {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.brand-mark {
+  font-size: 1.2rem;
+}
+
+/* =================================
+   PRESENTACIÓN PRINCIPAL
+================================= */
+
+.hero-copy h1 {
+  margin-bottom: 1.5rem;
+}
+
+.hero-copy .lead,
+.hero-copy .lead-strong {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+}
+
+.hero-copy .lead {
+  max-width: 42rem;
+}
+
+.hero-copy .lead-strong {
+  color: var(--forest);
+  margin-bottom: 1.5rem;
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+}
+
+/* =================================
+   TEXTOS Y TARJETAS
+================================= */
+
+p {
+  line-height: 1.8;
+}
+
+.project-body h3,
+.service-block h3,
+.step-card h3,
+.training-main h3 {
+  line-height: 1.3;
+}
+
+/* =================================
+   AJUSTES PARA CELULARES
+================================= */
+
+@media (max-width: 620px) {
+  h1 {
+    font-size: clamp(2.2rem, 9vw, 3rem);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+  }
+
+  h2 {
+    font-size: clamp(1.8rem, 7vw, 2.3rem);
+    line-height: 1.25;
+  }
+
+  .brand strong {
+    font-size: 1.5rem;
+  }
+
+  .hero-copy h1 {
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-copy .lead,
+  .hero-copy .lead-strong {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.1rem;
+  }
+}
