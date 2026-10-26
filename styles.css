@@ -27,7 +27,7 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--text);
-  font-family: "Manrope", sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.7;
 }
 
@@ -61,17 +61,17 @@ textarea {
 }
 
 .section-heading {
-  margin-bottom: 2.4rem;
-}
-
-.section-heading.compact {
   margin-bottom: 2rem;
 }
 
+.section-heading.compact {
+  margin-bottom: 1.5rem;
+}
+
 .eyebrow {
-  margin: 0 0 0.9rem;
+  margin: 0 0 0.8rem;
   color: var(--forest);
-  font-size: 0.76rem;
+  font-size: 0.74rem;
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -81,34 +81,42 @@ h1,
 h2,
 h3,
 h4,
-.brand strong {
-  font-family: "Cormorant Garamond", serif;
-  line-height: 1.08;
+h5,
+h6,
+.brand strong,
+.brand-mark {
   margin: 0;
-  font-weight: 600;
   color: var(--forest-deep);
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  font-weight: 700;
 }
 
 h1 {
-  font-size: clamp(3.1rem, 6vw, 5.3rem);
-  margin-bottom: 0.8rem;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  margin-bottom: 1rem;
 }
 
 h2 {
-  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-size: clamp(1.9rem, 3vw, 2.8rem);
+  margin-bottom: 0.8rem;
 }
 
 h3 {
-  font-size: clamp(1.9rem, 2vw, 2.4rem);
+  font-size: clamp(1.5rem, 2.3vw, 2rem);
+  margin-bottom: 0.65rem;
 }
 
 h4 {
-  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-size: clamp(1.2rem, 2vw, 1.45rem);
+  margin-bottom: 0.7rem;
 }
 
 p {
   margin: 0 0 1rem;
   color: var(--text-soft);
+  font-size: 1rem;
 }
 
 strong {
@@ -119,8 +127,8 @@ strong {
   position: sticky;
   top: 0;
   z-index: 30;
-  backdrop-filter: blur(12px);
   background: rgba(242, 245, 240, 0.82);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(213, 221, 211, 0.9);
 }
 
@@ -139,14 +147,13 @@ strong {
 }
 
 .brand-mark {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 2.5rem;
+  height: 2.5rem;
   display: grid;
   place-items: center;
   border-radius: 50%;
   background: var(--forest);
   color: var(--white);
-  font-family: "Cormorant Garamond", serif;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -158,11 +165,11 @@ strong {
 }
 
 .brand strong {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .brand small {
-  font-size: 0.6rem;
+  font-size: 0.62rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-soft);
@@ -177,8 +184,9 @@ strong {
 .site-nav a {
   position: relative;
   color: var(--text-soft);
-  font-size: 0.96rem;
+  font-size: 0.94rem;
   font-weight: 600;
+  font-family: "Open Sans", sans-serif;
 }
 
 .site-nav a::after {
@@ -220,16 +228,23 @@ strong {
   border-radius: 2px;
 }
 
+.button,
+.contact-link,
+.whatsapp-float,
+.resource-link {
+  font-family: "Open Sans", sans-serif;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 2.9rem;
-  padding: 0.85rem 1.4rem;
+  padding: 0.85rem 1.35rem;
   border-radius: 999px;
   border: 1px solid var(--forest);
   font-weight: 700;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .button:hover,
@@ -260,18 +275,24 @@ strong {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
-  gap: 2.4rem;
+  gap: 2.3rem;
+}
+
+.hero-copy {
+  max-width: 46rem;
 }
 
 .lead {
   max-width: 42rem;
-  font-size: 1.08rem;
+  font-size: 1.04rem;
+  line-height: 1.75;
+  color: var(--text-soft);
 }
 
 .lead-strong {
-  font-size: 1.14rem;
+  font-size: 1.08rem;
   color: var(--forest);
   font-weight: 600;
 }
@@ -280,7 +301,7 @@ strong {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin: 1.6rem 0 1.4rem;
+  margin: 1.5rem 0 1.2rem;
 }
 
 .hero-pills {
@@ -289,7 +310,7 @@ strong {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.7rem;
+  gap: 0.65rem;
 }
 
 .hero-pills li {
@@ -317,7 +338,7 @@ strong {
   border: 1px solid rgba(45, 89, 69, 0.12);
   background:
     linear-gradient(150deg, rgba(45, 89, 69, 0.08), rgba(127, 166, 138, 0.14)),
-    linear-gradient(180deg, rgba(255,255,255,0.7), rgba(223,233,225,0.7));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(223, 233, 225, 0.7));
   box-shadow: var(--shadow);
   display: grid;
   place-items: center;
@@ -355,7 +376,7 @@ strong {
   justify-content: center;
   padding: 1rem 1.5rem;
   border-radius: 999px;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255, 255, 255, 0.8);
   border: 1px solid rgba(45, 89, 69, 0.12);
   color: var(--forest-deep);
   letter-spacing: 0.08em;
@@ -379,7 +400,7 @@ strong {
 
 .about-copy p {
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.04rem;
   line-height: 1.8;
   color: var(--text-soft);
 }
@@ -409,12 +430,12 @@ strong {
   border-radius: 14px;
   background:
     linear-gradient(135deg, rgba(45, 89, 69, 0.18), rgba(127, 166, 138, 0.26)),
-    linear-gradient(180deg, rgba(255,255,255,0.8), rgba(223,233,225,0.7));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(223, 233, 225, 0.7));
   display: grid;
   place-items: center;
   color: var(--forest-deep);
   font-size: 0.8rem;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 800;
   cursor: pointer;
@@ -428,18 +449,22 @@ strong {
 }
 
 .project-body {
-  padding: 1.2rem 1.2rem 1.4rem;
+  padding: 1.15rem 1.15rem 1.35rem;
 }
 
 .project-body h3 {
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.6rem;
+}
+
+.project-body p {
+  margin-bottom: 0.8rem;
 }
 
 .project-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin: 1rem 0 0.8rem;
+  margin: 0.9rem 0 0.7rem;
 }
 
 .project-meta span {
@@ -458,6 +483,11 @@ strong {
   margin-top: 0.8rem;
 }
 
+.project-link a {
+  color: var(--forest);
+  font-weight: 700;
+}
+
 .expand-btn {
   border: 0;
   background: transparent;
@@ -466,6 +496,7 @@ strong {
   color: var(--forest);
   font-weight: 800;
   cursor: pointer;
+  font-family: "Open Sans", sans-serif;
 }
 
 .project-details {
@@ -502,12 +533,12 @@ strong {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
-  margin: 0.8rem 0 0.8rem;
+  margin: 0.8rem 0;
 }
 
 .resource-link {
   border: 1px solid var(--line);
-  background: rgba(255,255,255,0.7);
+  background: rgba(255, 255, 255, 0.7);
   color: var(--forest-deep);
   border-radius: 999px;
   padding: 0.55rem 0.8rem;
@@ -526,13 +557,13 @@ strong {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.4rem;
-  margin-bottom: 2.2rem;
+  margin-bottom: 2rem;
 }
 
 .service-block,
 .contact-card,
 .step-card {
-  background: rgba(255,255,255,0.7);
+  background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(213, 221, 211, 0.95);
   border-radius: var(--radius);
   box-shadow: 0 14px 35px rgba(31, 63, 52, 0.04);
@@ -542,8 +573,9 @@ strong {
   padding: 1.5rem 1.4rem;
 }
 
-.service-block h3 {
-  margin-bottom: 0.9rem;
+.service-block h3,
+.service-block h2 {
+  margin-bottom: 0.8rem;
 }
 
 .check-list {
@@ -572,19 +604,18 @@ strong {
 
 .step-number {
   display: inline-block;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.7rem;
   color: var(--sand);
   font-weight: 800;
   letter-spacing: 0.08em;
 }
 
 .step-card h3 {
-  font-size: 2rem;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.55rem;
 }
 
 .training-feature {
-  background: rgba(255,255,255,0.7);
+  background: rgba(255, 255, 255, 0.7);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
@@ -596,11 +627,13 @@ strong {
   padding: 1.7rem 1.5rem;
 }
 
+.training-main h2,
 .training-main h3,
 .training-main p {
   color: var(--white);
 }
 
+.training-main h2,
 .training-main h3 {
   margin-bottom: 0.5rem;
 }
@@ -624,9 +657,10 @@ strong {
   padding: 1.5rem 1.5rem 1.25rem;
 }
 
+.training-list-wrap h3,
 .training-list-wrap h4 {
   margin: 0 0 0.9rem;
-  color: var(--forest);
+  color: var(--forest-deep);
 }
 
 .course-list {
@@ -710,11 +744,6 @@ strong {
   color: var(--forest-deep);
 }
 
-.contact-link:hover,
-.contact-link:focus-visible {
-  transform: translateY(-1px);
-}
-
 .site-footer {
   padding: 1rem 0 2.8rem;
   border-top: 1px solid rgba(213, 221, 211, 0.9);
@@ -785,7 +814,7 @@ strong {
   height: 2.8rem;
   border: 0;
   border-radius: 50%;
-  background: rgba(255,255,255,0.18);
+  background: rgba(255, 255, 255, 0.18);
   color: var(--white);
   font-size: 2rem;
   cursor: pointer;
@@ -801,8 +830,8 @@ strong {
   border-radius: 22px;
   background:
     linear-gradient(135deg, rgba(45, 89, 69, 0.15), rgba(127, 166, 138, 0.2)),
-    linear-gradient(180deg, rgba(255,255,255,0.8), rgba(223,233,225,0.7));
-  border: 1px solid rgba(255,255,255,0.2);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(223, 233, 225, 0.7));
+  border: 1px solid rgba(255, 255, 255, 0.2);
   display: grid;
   place-items: center;
   padding: 1.5rem;
@@ -822,7 +851,7 @@ strong {
   height: 100%;
   object-fit: contain;
   display: none;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255, 255, 255, 0.7);
 }
 
 #lightbox-title {
@@ -847,7 +876,7 @@ strong {
 
 .lightbox-art.has-image #lightbox-title {
   display: block;
-  background: rgba(255,255,255,0.6);
+  background: rgba(255, 255, 255, 0.6);
   padding: 0.5rem 0.8rem;
   border-radius: 999px;
   backdrop-filter: blur(4px);
@@ -863,11 +892,6 @@ strong {
   .section-grid,
   .contact-wrap {
     grid-template-columns: 1fr;
-  }
-
-  .contact-wrap {
-    gap: 1rem;
-    padding-top: 0;
   }
 
   .portfolio-grid {
@@ -891,7 +915,7 @@ strong {
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem;
-    background: rgba(255,255,255,0.98);
+    background: rgba(255, 255, 255, 0.98);
     border: 1px solid var(--line);
     border-radius: 16px;
     box-shadow: var(--shadow);
@@ -932,10 +956,6 @@ strong {
     font-size: 0.9rem;
   }
 
-  .contact-copy h2 {
-    margin-bottom: 0.5rem;
-  }
-
   .training-badge {
     min-width: 100px;
   }
@@ -960,140 +980,5 @@ strong {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-  }
-}
-
-/* =================================
-   TIPOGRAFÍA GENERAL
-================================= */
-
-body {
-  font-family: "Open Sans", sans-serif;
-  line-height: 1.7;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.brand strong,
-.brand-mark {
-  font-family: "Montserrat", sans-serif;
-}
-
-/* =================================
-   TÍTULOS: TAMAÑO Y ESPACIADO
-================================= */
-
-h1 {
-  font-size: clamp(2.5rem, 4.5vw, 3.8rem);
-  line-height: 1.18;
-  letter-spacing: -0.04em;
-  margin-bottom: 1.4rem;
-}
-
-h2 {
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
-  line-height: 1.2;
-  letter-spacing: -0.03em;
-  margin-bottom: 1rem;
-}
-
-h3 {
-  font-size: clamp(1.5rem, 2vw, 2rem);
-  line-height: 1.3;
-}
-
-h4 {
-  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
-  line-height: 1.35;
-}
-
-.brand strong {
-  font-size: 1.7rem;
-  font-weight: 600;
-}
-
-.brand-mark {
-  font-size: 1.2rem;
-}
-
-/* =================================
-   PRESENTACIÓN PRINCIPAL
-================================= */
-
-.hero-copy h1 {
-  margin-bottom: 1.5rem;
-}
-
-.hero-copy .lead,
-.hero-copy .lead-strong {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.05rem;
-  line-height: 1.85;
-  font-weight: 400;
-  margin-top: 0;
-  margin-bottom: 1.25rem;
-}
-
-.hero-copy .lead {
-  max-width: 42rem;
-}
-
-.hero-copy .lead-strong {
-  color: var(--forest);
-  margin-bottom: 1.5rem;
-}
-
-.hero-actions {
-  margin-top: 1.5rem;
-}
-
-/* =================================
-   TEXTOS Y TARJETAS
-================================= */
-
-p {
-  line-height: 1.8;
-}
-
-.project-body h3,
-.service-block h3,
-.step-card h3,
-.training-main h3 {
-  line-height: 1.3;
-}
-
-/* =================================
-   AJUSTES PARA CELULARES
-================================= */
-
-@media (max-width: 620px) {
-  h1 {
-    font-size: clamp(2.2rem, 9vw, 3rem);
-    line-height: 1.2;
-    letter-spacing: -0.03em;
-  }
-
-  h2 {
-    font-size: clamp(1.8rem, 7vw, 2.3rem);
-    line-height: 1.25;
-  }
-
-  .brand strong {
-    font-size: 1.5rem;
-  }
-
-  .hero-copy h1 {
-    margin-bottom: 1.2rem;
-  }
-
-  .hero-copy .lead,
-  .hero-copy .lead-strong {
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 1.1rem;
   }
 }
