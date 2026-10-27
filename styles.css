@@ -1097,3 +1097,21 @@ strong {
     padding-bottom: 18px;
   }
 }
+
+/* Ajuste de alineación del menú superior */
+@media (min-width: 961px) {
+  .nav-wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  .site-nav {
+    margin-left: auto;
+    margin-right: 18px;
+  }
+
+  .nav-cta {
+    margin-left: 0;
+    flex-shrink: 0;
+  }
+}
