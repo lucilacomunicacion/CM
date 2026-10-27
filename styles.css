@@ -1766,3 +1766,15 @@ body.lightbox-open {
   margin-top: 1rem;
   font-weight: 600;
 }
+.project-image.logo-cover {
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  pointer-events: none;
+}
+
+.project-image.logo-cover img {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
