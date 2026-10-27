@@ -1160,3 +1160,105 @@ strong {
     flex-shrink: 0;
   }
 }
+
+/* ==================================
+   PORTADA EDITORIAL - LUCILA
+   ================================== */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #f5f1e8;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+}
+
+/* Título con personalidad editorial */
+.hero-copy h1 {
+  max-width: 650px;
+  margin: 0 0 2rem;
+  color: #24382f;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3rem, 5.2vw, 5rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+/* Presentación profesional */
+.hero-copy .lead {
+  max-width: 510px;
+  color: #343b35;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* Objetivo profesional */
+.hero-copy .lead-strong {
+  margin-top: 1.7rem;
+  max-width: 530px;
+  color: #273a31;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+/* Botones de la portada */
+.hero-actions {
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+/* Video con terminación más elegante */
+.video-box {
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+/* Detalle gráfico debajo del título */
+.hero-copy h1::after {
+  content: "";
+  display: block;
+  width: 115px;
+  height: 5px;
+  margin-top: 1rem;
+  border-radius: 10px;
+  background: #82917a;
+  transform: rotate(-2deg);
+}
+
+/* Ajustes para celulares */
+@media (max-width: 620px) {
+  .hero {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.8rem, 12vw, 4rem);
+    line-height: 1;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-copy .lead {
+    font-size: 0.96rem;
+  }
+
+  .hero-copy .lead-strong {
+    font-size: 1rem;
+    margin-top: 1.3rem;
+  }
+
+  .hero-actions {
+    margin-top: 1.6rem;
+  }
+
+  .video-box {
+    border-radius: 18px;
+  }
+}
