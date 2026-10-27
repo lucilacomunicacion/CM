@@ -113,11 +113,20 @@ document.addEventListener("DOMContentLoaded", () => {
       resource.type === "video" ||
       /\.(mp4|webm|ogg)(\?.*)?$/i.test(resource.url);
 
-    if (isVideo) {
-      lightboxVideo.src = resource.url;
-      lightboxVideo.hidden = false;
-      lightboxVideo.load();
-    } else {
+ 
+if (isVideo) {
+  lightboxVideo.src = resource.url;
+  lightboxVideo.hidden = false;
+  lightboxVideo.muted = true;
+  lightboxVideo.autoplay = true;
+  lightboxVideo.load();
+
+  lightboxVideo.play().catch(() => {
+    // Si el navegador bloquea la reproducción automática,
+    // se puede iniciar con el botón Play.
+  });
+} else {
+
       lightboxImage.src = resource.url;
       lightboxImage.alt = resource.label || projectName;
       lightboxImage.hidden = false;
