@@ -1741,3 +1741,17 @@ body.lightbox-open {
     font-size: 0.96rem;
   }
 }
+/* Uniformidad de los textos de presentación */
+#inicio .hero-copy .lead,
+#inicio .hero-copy .lead-strong {
+  max-width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.75;
+  letter-spacing: normal;
+}
+
+#inicio .hero-copy .lead-strong {
+  margin-top: 1rem;
+  font-weight: 600;
+}
