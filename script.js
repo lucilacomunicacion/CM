@@ -203,6 +203,92 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // Recursos que se muestran en "Ver trabajos"
+  const projectGalleries = {
+    "casa-del-plotter": [
+      {
+        label: "Antes del proyecto",
+        url: "assets/proyectos/casa-del-plotter/La%20casa%20del%20plotter%20antes.png"
+      },
+      {
+        label: "Después del proyecto",
+        url: "assets/proyectos/casa-del-plotter/La%20casa%20del%20plotter%20despues.png"
+      },
+      {
+        label: "Historia diseñada",
+        url: "assets/proyectos/casa-del-plotter/la%20casa%20del%20plotter%20historia.png"
+      },
+      {
+        label: "Publicación diseñada",
+        url: "assets/proyectos/casa-del-plotter/la%20casa%20del%20plotter%20post.png"
+      },
+      {
+        label: "Reel realizado",
+        url: "assets/proyectos/casa-del-plotter/videos%20(3).mp4",
+        type: "video"
+      }
+    ],
+
+    "iconic-teen": [
+      {
+        label: "Perfil antes",
+        url: "assets/proyectos/iconic-teen/Iconic%20teen%20antes.png"
+      },
+      {
+        label: "Perfil después",
+        url: "assets/proyectos/iconic-teen/Iconic%20teen%20despues.png"
+      },
+      {
+        label: "Feed antes",
+        url: "assets/proyectos/iconic-teen/iconic%20teen%20antes%20(2).png"
+      },
+      {
+        label: "Feed después",
+        url: "assets/proyectos/iconic-teen/iconic%20teen%20despues%20(2).png"
+      },
+      {
+        label: "Publicación diseñada",
+        url: "assets/proyectos/iconic-teen/iconic%20teen%20post.png"
+      },
+      {
+        label: "Reel realizado 1",
+        url: "assets/proyectos/iconic-teen/videos.mp4",
+        type: "video"
+      },
+      {
+        label: "Reel realizado 2",
+        url: "assets/proyectos/iconic-teen/videos%20(1).mp4",
+        type: "video"
+      }
+    ],
+
+    "marca-personal": [
+      {
+        label: "Diseño del feed",
+        url: "assets/proyectos/marca-personal/marca%20personal%20feed.png"
+      },
+      {
+        label: "Publicación diseñada",
+        url: "assets/proyectos/marca-personal/marca%20personal%20post.png"
+      },
+      {
+        label: "TikTok realizado 1",
+        url: "assets/proyectos/marca-personal/videos%20(2).mp4",
+        type: "video"
+      },
+      {
+        label: "TikTok realizado 2",
+        url: "assets/proyectos/marca-personal/videos%20(4).mp4",
+        type: "video"
+      }
+    ]
+  };
+
+  function openProjectGallery(projectName, galleryName) {
+    const resources = projectGalleries[galleryName] || [];
+    openLightbox(projectName, resources);
+  }
+
   // Al hacer clic en la imagen principal del proyecto
   document.querySelectorAll(".project-image").forEach((button) => {
     button.addEventListener("click", () => {
@@ -219,15 +305,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Al hacer clic en Métricas, abrir la galería del proyecto
+ 
+  // Abrir trabajos o métricas de cada proyecto
   document.querySelectorAll(".resource-link").forEach((button) => {
     button.addEventListener("click", () => {
       const projectName = button.dataset.project || "Proyecto";
-      const resources = parseResources(button);
 
+      // Si tiene data-gallery, abrirá la galería de trabajos
+      if (button.dataset.gallery) {
+        const galleryName = button.dataset.gallery;
+
+        openProjectGallery(projectName, galleryName);
+        return;
+      }
+
+      // Si no, abrirá las métricas
+      const resources = parseResources(button);
       openLightbox(projectName, resources);
     });
   });
+
 
   // Cerrar con el botón o al hacer clic fuera del panel
   lightboxClose.addEventListener("click", closeLightbox);
