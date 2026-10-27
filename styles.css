@@ -1556,3 +1556,26 @@ body.lightbox-open {
     max-width: 340px;
   }
 }
+
+/* Ajustes puntuales del título principal */
+.hero-copy h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.hero-copy h1::after {
+  display: none;
+}
+
+/* Alineación de los textos de presentación */
+.hero-copy .lead,
+.hero-copy .lead-strong {
+  text-align: justify;
+}
+
+/* Mejor lectura de los textos en celulares */
+@media (max-width: 620px) {
+  .hero-copy .lead,
+  .hero-copy .lead-strong {
+    text-align: left;
+  }
+}
