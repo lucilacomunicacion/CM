@@ -1408,3 +1408,71 @@ body.lightbox-open {
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
+/* Portadas del portfolio */
+.project-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 280px;
+  min-height: 280px;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #ffffff;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+.project-cover-post {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 12px;
+  background: #ffffff;
+}
+
+.project-cover-logo {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  width: 82px;
+  height: 82px;
+  object-fit: contain;
+  padding: 7px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Imágenes y videos ampliados */
+#lightbox-art {
+  width: 100%;
+  min-height: 300px;
+  max-height: 78vh;
+  overflow: auto;
+  background: #ffffff;
+}
+
+#lightbox-art img,
+#lightbox-art video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 78vh;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto;
+}
+
+#lightbox-art img[hidden],
+#lightbox-art video[hidden] {
+  display: none !important;
+}
+
