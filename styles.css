@@ -1745,7 +1745,7 @@ body.lightbox-open {
 #inicio .hero-copy .lead,
 #inicio .hero-copy .lead-strong {
   max-width: 100%;
-  text-align: left;
+  text-align: justify;
   font-size: 1rem;
   line-height: 1.75;
   letter-spacing: normal;
