@@ -206,38 +206,23 @@ document.addEventListener("DOMContentLoaded", () => {
   // Recursos que se muestran en "Ver trabajos"
   const projectGalleries = {
     "casa-del-plotter": [
+  
       {
-        label: "Antes del proyecto",
-        url: "assets/proyectos/casa-del-plotter/La%20casa%20del%20plotter%20antes.png"
-      },
-      {
-        label: "Después del proyecto",
-        url: "assets/proyectos/casa-del-plotter/La%20casa%20del%20plotter%20despues.png"
-      },
-      {
-        label: "Historia diseñada",
+        label: "Historias",
         url: "assets/proyectos/casa-del-plotter/la%20casa%20del%20plotter%20historia.png"
       },
       {
-        label: "Publicación diseñada",
+        label: "Posteos",
         url: "assets/proyectos/casa-del-plotter/la%20casa%20del%20plotter%20post.png"
       },
       {
-        label: "Reel realizado",
+        label: "Reels",
         url: "assets/proyectos/casa-del-plotter/videos%20(3).mp4",
         type: "video"
       }
     ],
 
     "iconic-teen": [
-      {
-        label: "Perfil antes",
-        url: "assets/proyectos/iconic-teen/Iconic%20teen%20antes.png"
-      },
-      {
-        label: "Perfil después",
-        url: "assets/proyectos/iconic-teen/Iconic%20teen%20despues.png"
-      },
       {
         label: "Feed antes",
         url: "assets/proyectos/iconic-teen/iconic%20teen%20antes%20(2).png"
@@ -247,16 +232,16 @@ document.addEventListener("DOMContentLoaded", () => {
         url: "assets/proyectos/iconic-teen/iconic%20teen%20despues%20(2).png"
       },
       {
-        label: "Publicación diseñada",
+        label: "Posteos",
         url: "assets/proyectos/iconic-teen/iconic%20teen%20post.png"
       },
       {
-        label: "Reel realizado 1",
+        label: "Reel 1",
         url: "assets/proyectos/iconic-teen/videos.mp4",
         type: "video"
       },
       {
-        label: "Reel realizado 2",
+        label: "Reel 2",
         url: "assets/proyectos/iconic-teen/videos%20(1).mp4",
         type: "video"
       }
@@ -264,20 +249,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
     "marca-personal": [
       {
-        label: "Diseño del feed",
+        label: "Feed",
         url: "assets/proyectos/marca-personal/marca%20personal%20feed.png"
       },
       {
-        label: "Publicación diseñada",
+        label: "Posteos",
         url: "assets/proyectos/marca-personal/marca%20personal%20post.png"
       },
       {
-        label: "TikTok realizado 1",
+        label: "TikTok 1",
         url: "assets/proyectos/marca-personal/videos%20(2).mp4",
         type: "video"
       },
       {
-        label: "TikTok realizado 2",
+        label: "TikTok 2",
         url: "assets/proyectos/marca-personal/videos%20(4).mp4",
         type: "video"
       }
