@@ -1982,3 +1982,202 @@ body.lightbox-open {
     border-radius: 8px;
   }
 }
+
+/* =========================================
+   AJUSTES RESPONSIVE PARA CELULARES
+   ========================================= */
+
+@media (max-width: 760px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  /* Encabezado */
+  .nav-wrap {
+    position: relative;
+    min-height: 70px;
+    gap: 0.75rem;
+  }
+
+  .nav-toggle {
+    display: flex;
+    flex: 0 0 auto;
+    margin-left: auto;
+    cursor: pointer;
+  }
+
+  /* Menú desplegable */
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0.5rem;
+    background: var(--background);
+    border: 1px solid var(--line);
+    border-radius: 0 0 16px 16px;
+    box-shadow: var(--shadow);
+  }
+
+  .site-nav.is-open {
+    display: flex;
+  }
+
+  .site-nav a {
+    display: block;
+    padding: 0.8rem 0.9rem;
+    font-size: 1rem;
+  }
+
+  .site-nav a::after {
+    display: none;
+  }
+
+  /* Botón flotante de WhatsApp */
+  .whatsapp-float {
+    right: 0.75rem;
+    bottom: max(0.75rem, env(safe-area-inset-bottom));
+    max-width: calc(100vw - 1.5rem);
+    padding: 0.7rem 0.95rem;
+    font-size: 0.82rem;
+    line-height: 1.3;
+    white-space: normal;
+    text-align: center;
+  }
+
+  /* Ventana de trabajos y métricas */
+  .lightbox {
+    padding: 0.5rem;
+    align-items: center;
+  }
+
+  .lightbox-panel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90dvh;
+    max-height: 90dvh;
+    min-height: 0;
+    padding: 0.85rem;
+    gap: 0.65rem;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+
+  .lightbox-panel h2 {
+    flex: 0 0 auto;
+    padding-right: 2.4rem;
+    font-size: 1.05rem;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+  }
+
+  /* Selector de recursos: se desliza solo esta fila */
+  .lightbox-gallery {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 0.45rem;
+    margin: 0;
+    padding: 0.15rem 0 0.45rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .gallery-item {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 0.55rem 0.8rem;
+    font-size: 0.82rem;
+  }
+
+  /* Área del video */
+  #lightbox-art {
+    flex: 1 1 0;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    max-height: none;
+    padding: 0.35rem;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  #lightbox-art video {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+
+  #lightbox-art img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  #lightbox-art img[hidden],
+  #lightbox-art video[hidden] {
+    display: none !important;
+  }
+
+  .lightbox-close {
+    top: 0.65rem;
+    right: 0.65rem;
+    z-index: 75;
+    width: 2.3rem;
+    height: 2.3rem;
+    font-size: 1.65rem;
+    background: var(--forest);
+    color: var(--white);
+  }
+
+  /* Botones de la portada */
+  .hero-actions {
+    gap: 0.65rem;
+  }
+
+  .hero-actions .button {
+    max-width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .brand strong {
+    font-size: 1.5rem;
+  }
+
+  .brand-mark {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .lightbox-panel {
+    padding: 0.65rem;
+  }
+
+  .gallery-item {
+    padding: 0.5rem 0.65rem;
+    font-size: 0.78rem;
+  }
+
+  .whatsapp-float {
+    font-size: 0.78rem;
+  }
+}
