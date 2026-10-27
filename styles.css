@@ -1750,6 +1750,17 @@ body.lightbox-open {
   line-height: 1.75;
   letter-spacing: normal;
 }
+/* Ajuste de títulos y descripciones del portfolio */
+.project-body h3 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+
+.project-body p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
 
 #inicio .hero-copy .lead-strong {
   margin-top: 1rem;
