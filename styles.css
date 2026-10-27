@@ -1683,3 +1683,61 @@ body.lightbox-open {
     padding: 0;
   }
 }
+/* Ajuste final de la presentación principal */
+#inicio .hero-copy {
+  text-align: left;
+}
+
+#inicio .hero-copy h1 {
+  max-width: 100%;
+  margin: 0 0 1.4rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2.3rem, 3.5vw, 3.2rem);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  color: #24382f;
+}
+
+#inicio .hero-name {
+  color: #54765d;
+  font-style: italic;
+  font-weight: 500;
+}
+
+#inicio .hero-copy .lead,
+#inicio .hero-copy .lead-strong {
+  max-width: 100%;
+  text-align: left;
+  line-height: 1.75;
+}
+
+#inicio .hero-copy .lead {
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+#inicio .hero-copy .lead-strong {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#inicio .hero-actions {
+  margin-top: 1.6rem;
+}
+
+@media (max-width: 620px) {
+  #inicio .hero-copy h1 {
+    font-size: clamp(2.2rem, 8vw, 2.8rem);
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+  }
+
+  #inicio .hero-copy .lead,
+  #inicio .hero-copy .lead-strong {
+    font-size: 0.96rem;
+  }
+}
