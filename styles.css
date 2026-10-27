@@ -1579,3 +1579,107 @@ body.lightbox-open {
     text-align: left;
   }
 }
+
+/* ==================================
+   REDISEÑO DE LA SECCIÓN DE CONTACTO
+   ================================== */
+
+#contacto {
+  background: #f5f1e8;
+}
+
+#contacto .contact-wrap {
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+#contacto .contact-copy .eyebrow {
+  color: #526458;
+}
+
+#contacto .contact-copy h2 {
+  color: #24382f;
+}
+
+#contacto .contact-copy > p:last-child {
+  max-width: 38rem;
+  line-height: 1.8;
+  color: #343b35;
+}
+
+#contacto .contact-card {
+  gap: 0.8rem;
+  padding: 1.5rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* WhatsApp: botón principal */
+#contacto .contact-card > .contact-link:first-child {
+  min-height: 3.4rem;
+  background: #2d5945;
+  border: 1px solid #2d5945;
+  border-radius: 12px;
+  color: #ffffff;
+}
+
+/* Formulario: botón secundario */
+#contacto .contact-card > .contact-link:nth-child(2) {
+  min-height: 3.4rem;
+  background: transparent;
+  border: 1px solid #2d5945;
+  border-radius: 12px;
+  color: #2d5945;
+}
+
+/* Texto introductorio de las redes */
+#contacto .contact-alternative {
+  margin: 0.7rem 0 0.2rem;
+  color: #526458;
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+/* Email, Instagram y TikTok */
+#contacto .contact-socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.2rem;
+}
+
+#contacto .contact-socials .contact-link {
+  min-height: auto;
+  padding: 0.3rem 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #526458;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+#contacto .contact-socials .contact-link:hover {
+  color: #2d5945;
+  transform: none;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 620px) {
+  #contacto {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  #contacto .contact-wrap {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  #contacto .contact-card {
+    padding: 0;
+  }
+}
