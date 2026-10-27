@@ -442,16 +442,30 @@
       Hablemos de tu proyecto
     </a>
 
-    <div class="lightbox" id="lightbox" aria-hidden="true">
-      <button class="lightbox-close" type="button" aria-label="Cerrar vista ampliada">×</button>
-      <div class="lightbox-panel" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
-        <div class="lightbox-art no-image">
-          <img id="lightbox-image" src="" alt="Vista ampliada del recurso" />
-          <span id="lightbox-title">Proyecto</span>
-          <span id="lightbox-placeholder">Espacio para imagen real</span>
-        </div>
-      </div>
+   <div class="lightbox" id="lightbox" aria-hidden="true">
+  <button
+    class="lightbox-close"
+    type="button"
+    aria-label="Cerrar vista ampliada"
+  >×</button>
+
+  <div
+    class="lightbox-panel"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="lightbox-title"
+  >
+    <h2 id="lightbox-title">Proyecto</h2>
+
+    <div class="lightbox-gallery" id="lightbox-gallery"></div>
+
+    <div class="lightbox-art no-image" id="lightbox-art">
+      <img id="lightbox-image" src="" alt="" />
+      <video id="lightbox-video" controls playsinline hidden></video>
+      <span id="lightbox-placeholder">Seleccioná un recurso para verlo.</span>
     </div>
+  </div>
+</div>
 
     <script src="script.js"></script>
   </body>
