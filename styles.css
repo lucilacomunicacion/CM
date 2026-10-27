@@ -956,3 +956,144 @@ strong {
     bottom: 0.75rem;
   }
 }
+
+/* ========================================
+   MI FORMACIÓN — LÍNEA DE TIEMPO
+   ======================================== */
+
+.training-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 42px;
+  align-items: start;
+  margin-top: 36px;
+}
+
+/* Formación principal: sin tarjeta tradicional */
+.training-main {
+  position: relative;
+  padding: 8px 0 8px 28px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Línea vertical de la formación principal */
+.training-main::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  background: #d5ddd3;
+}
+
+/* Punto de inicio */
+.training-main::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #2d5945;
+  box-shadow: 0 0 0 5px #dfe9e1;
+}
+
+/* Cursos complementarios: lista de hitos */
+.training-list-wrap {
+  padding: 8px 0 8px 26px;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  border-left: 1px solid #d5ddd3;
+}
+
+/* Lista sin viñetas predeterminadas */
+.course-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+/* Cada curso funciona como un hito */
+.course-list li {
+  position: relative;
+  padding: 0 0 22px 22px;
+  margin: 0;
+  border-left: 2px solid #d5ddd3;
+}
+
+/* Evita que el último hito prolongue la línea */
+.course-list li:last-child {
+  padding-bottom: 0;
+  border-left-color: transparent;
+}
+
+/* Punto de cada curso */
+.course-list li::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #7fa68a;
+  border: 2px solid #f2f5f0;
+  box-shadow: 0 0 0 1px #7fa68a;
+}
+
+/* Textos de la sección */
+.training-main h3,
+.training-list-wrap h3 {
+  color: #1c382d;
+  margin-top: 0;
+}
+
+.training-main p,
+.training-list-wrap p,
+.course-list li {
+  color: #526458;
+  line-height: 1.75;
+}
+
+/* Adaptación a pantallas medianas */
+@media (max-width: 960px) {
+  .training-feature {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .training-list-wrap {
+    margin-left: 0;
+  }
+}
+
+/* Adaptación a celulares */
+@media (max-width: 620px) {
+  .training-feature {
+    gap: 26px;
+    margin-top: 26px;
+  }
+
+  .training-main {
+    padding-left: 24px;
+  }
+
+  .training-list-wrap {
+    padding-left: 22px;
+  }
+
+  .course-list {
+    margin-top: 16px;
+  }
+
+  .course-list li {
+    padding-bottom: 18px;
+  }
+}
