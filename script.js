@@ -25,20 +25,29 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+ 
   // Mostrar y ocultar detalles de cada proyecto
   document.querySelectorAll(".expand-btn").forEach((button) => {
     button.addEventListener("click", () => {
+      const card = button.closest(".project-card");
       const details = button.nextElementSibling;
 
-      if (!details || !details.classList.contains("project-details")) return;
+      if (
+        !card ||
+        !details ||
+        !details.classList.contains("project-details")
+      ) {
+        return;
+      }
 
       const isOpen = button.getAttribute("aria-expanded") === "true";
 
       button.setAttribute("aria-expanded", String(!isOpen));
       button.textContent = isOpen ? "Ver detalles" : "Ocultar detalles";
-      details.classList.toggle("is-open", !isOpen);
+      card.classList.toggle("is-open", !isOpen);
     });
   });
+
 
   // Ventana ampliada para imágenes y videos
   const lightbox = document.querySelector("#lightbox");
