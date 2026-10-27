@@ -274,11 +274,14 @@ document.addEventListener("DOMContentLoaded", () => {
     openLightbox(projectName, resources);
   }
 
+
   // Al hacer clic en la imagen principal del proyecto
-  document.querySelectorAll(".project-image").forEach((button) => {
+  document.querySelectorAll("button.project-image").forEach((button) => {
     button.addEventListener("click", () => {
       const projectName = button.dataset.project || "Proyecto";
       const imageUrl = button.dataset.image || "";
+
+      if (!imageUrl) return;
 
       openLightbox(projectName, [
         {
@@ -289,6 +292,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ]);
     });
   });
+
 
  
   // Abrir trabajos o métricas de cada proyecto
