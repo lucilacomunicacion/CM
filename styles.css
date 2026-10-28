@@ -2749,3 +2749,107 @@ border: 1px solid var(--sage);
     justify-content: center;
   }
 }
+
+/* =========================================
+   BOTONES DE GMAIL, INSTAGRAM Y TIKTOK
+   ========================================= */
+
+#contacto .contact-socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+#contacto .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid #d5ddd3;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #2d5945;
+  box-shadow: 0 3px 10px rgba(28, 56, 45, 0.06);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+#contacto .social-icon svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Gmail */
+#contacto .social-gmail {
+  background: #ffffff;
+  border-color: #dadce0;
+}
+
+#contacto .social-gmail .gmail-red {
+  stroke: #EA4335;
+}
+
+#contacto .social-gmail .gmail-blue {
+  stroke: #4285F4;
+}
+
+#contacto .social-gmail .gmail-green {
+  stroke: #34A853;
+}
+
+#contacto .social-gmail .gmail-yellow {
+  stroke: #FBBC05;
+}
+
+/* Instagram */
+#contacto .social-instagram {
+  color: #C13584;
+}
+
+/* TikTok */
+#contacto .social-tiktok {
+  color: #111111;
+}
+
+#contacto .social-tiktok svg {
+  stroke-width: 2.2;
+}
+
+/* Efecto al pasar el cursor */
+#contacto .social-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 16px rgba(28, 56, 45, 0.14);
+}
+
+#contacto .social-icon:focus-visible {
+  outline: 2px solid #2d5945;
+  outline-offset: 4px;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 620px) {
+  #contacto .contact-socials {
+    gap: 16px;
+  }
+
+  #contacto .social-icon {
+    flex-basis: 42px;
+    width: 42px;
+    height: 42px;
+  }
+}
