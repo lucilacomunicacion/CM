@@ -2410,3 +2410,121 @@ border: 1px solid var(--sage);
   }
 }
 
+/* =========================================
+   PORTADA — AJUSTE DE DISTRIBUCIÓN
+   ========================================= */
+
+#inicio.hero {
+  padding: 4rem 0;
+  background: #f5f1e8;
+}
+
+#inicio .hero-grid {
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+#inicio .hero-copy {
+  max-width: 620px;
+  min-width: 0;
+}
+
+#inicio .hero-copy h1 {
+  margin-bottom: 1.25rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+#inicio .hero-name {
+  color: #54765d;
+  font-style: italic;
+}
+
+#inicio .hero-copy .lead {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.75;
+  text-align: left;
+}
+
+#inicio .hero-copy .lead-strong {
+  margin-top: 1.25rem;
+  font-size: 1.04rem;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+#inicio .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.75rem;
+}
+
+#inicio .hero-visual {
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#inicio .video-box {
+  width: min(100%, 320px);
+  max-width: 320px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 20px;
+  background: transparent;
+  box-shadow: 0 16px 40px rgba(24, 41, 34, 0.10);
+}
+
+#inicio .video-box video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+/* Tablet y celular */
+@media (max-width: 760px) {
+  #inicio.hero {
+    padding: 3rem 0;
+  }
+
+  #inicio .hero-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  #inicio .hero-copy {
+    max-width: 100%;
+  }
+
+  #inicio .hero-copy h1 {
+    font-size: clamp(2.35rem, 8vw, 3.2rem);
+  }
+
+  #inicio .hero-visual {
+    justify-content: center;
+  }
+
+  #inicio .video-box {
+    width: min(100%, 280px);
+  }
+}
+
+@media (max-width: 420px) {
+  #inicio .hero-actions {
+    gap: 0.6rem;
+  }
+
+  #inicio .hero-actions .button {
+    padding: 0.75rem 1rem;
+    font-size: 0.88rem;
+  }
+}
