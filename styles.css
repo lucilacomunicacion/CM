@@ -2691,7 +2691,31 @@ border: 1px solid var(--sage);
 .site-header .brand-copy strong {
   text-align: center;
 }
+/* Presentación centrada en celulares */
+@media (max-width: 760px) {
+  #inicio .hero-copy {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
 
+  #inicio .hero-copy h1 {
+    text-align: center;
+  }
+
+  #inicio .hero-copy .lead,
+  #inicio .hero-copy .lead-strong {
+    text-align: justify;
+  }
+
+  #inicio .hero-actions {
+    justify-content: center;
+  }
+
+  #inicio .hero-visual {
+    justify-content: center;
+  }
+}
 .site-header .brand-copy small {
   text-align: center;
   width: 100%;
