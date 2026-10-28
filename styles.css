@@ -2448,3 +2448,14 @@ body.lightbox-open {
   color: var(--white);
   text-align: left;
 }
+/* Evitar que la web se ensanche horizontalmente */
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.container {
+  width: min(var(--container), calc(100% - 2rem));
+  margin-inline: auto;
+}
