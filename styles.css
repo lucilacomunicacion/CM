@@ -2286,8 +2286,9 @@ body.lightbox-open {
   height: 2.8rem;
   margin-bottom: 1.2rem;
   border-radius: 50%;
-  background: var(--white);
-  color: var(--forest);
+ background: #f2f5f0;
+color: var(--forest-deep);
+border: 1px solid var(--sage);
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
 }
