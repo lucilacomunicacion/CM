@@ -2476,12 +2476,13 @@ border: 1px solid var(--sage);
   width: min(100%, 320px);
   max-width: 320px;
   margin: 0 auto;
+  padding: 0;
   overflow: hidden;
   border-radius: 20px;
   background: transparent;
   box-shadow: 0 16px 40px rgba(24, 41, 34, 0.10);
+  line-height: 0;
 }
-
 #inicio .video-box video {
   display: block;
   width: 100%;
