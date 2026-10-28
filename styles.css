@@ -2646,9 +2646,21 @@ border: 1px solid var(--sage);
 />
 /* Logo LC: letras finas */
 .site-header .brand-mark {
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #2d5945;
+  color: #f2f5f0;
   font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
   font-weight: 300;
-  letter-spacing: -0.08em;
+  letter-spacing: -0.09em;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* Nombre LUCILA: tipografía fina */
