@@ -2224,3 +2224,211 @@ body.lightbox-open {
     padding: 1.25rem;
   }
 }
+
+/* =========================================
+   REDISEÑO DE CÓMO TRABAJO Y SERVICIOS
+   ========================================= */
+
+.services-section {
+  padding: 0;
+  background: #f2f5f0;
+}
+
+/* CÓMO TRABAJO: bloque verde */
+.process-section {
+  position: relative;
+  padding: 4.5rem 2.5rem;
+  margin-inline: calc((1160px - 100vw) / 2);
+  padding-inline: max(2.5rem, calc((100vw - 1110px) / 2));
+  background: var(--forest-deep);
+  color: var(--white);
+}
+
+.process-heading {
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+}
+
+.process-heading .eyebrow {
+  color: var(--sand);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.process-heading h2 {
+  color: var(--white);
+}
+
+/* Cuatro tarjetas parejas */
+.process-section .steps-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 1.2rem;
+}
+
+.process-section .step-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 270px;
+  height: 100%;
+  padding: 1.6rem;
+  background: #f8faf7;
+  color: var(--text);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.process-section .step-number {
+  flex-shrink: 0;
+  width: 2.8rem;
+  height: 2.8rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+  border-radius: 50%;
+  background: var(--sage-soft);
+  color: var(--forest);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+}
+
+.process-section .step-card h3 {
+  color: var(--forest-deep);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.4;
+  margin: 0 0 0.8rem;
+}
+
+.process-section .step-card p {
+  color: var(--text-soft);
+  font-size: 0.94rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* SERVICIOS: bloque marfil */
+.services-offer {
+  padding: 4.5rem 0;
+}
+
+.services-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.services-heading .eyebrow {
+  color: var(--forest);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.services-heading h2 {
+  color: var(--forest-deep);
+}
+
+/* Dos tarjetas destacadas */
+.services-offer .service-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 1.5rem;
+}
+
+.services-offer .service-block {
+  box-sizing: border-box;
+  height: 100%;
+  min-width: 0;
+  padding: 2rem;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--forest);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.service-label {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--forest);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.services-offer .service-block h3 {
+  color: var(--forest-deep);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.4;
+  margin-bottom: 1.4rem;
+}
+
+.services-offer .check-list li {
+  line-height: 1.65;
+  margin-bottom: 0.65rem;
+}
+
+/* Adaptación a pantallas medianas */
+@media (max-width: 960px) {
+  .process-section {
+    margin-inline: 0;
+    padding: 3.5rem 1.5rem;
+  }
+
+  .process-section .steps-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .process-section .step-card {
+    min-height: 240px;
+  }
+
+  .services-offer {
+    padding: 3.5rem 0;
+  }
+}
+
+/* Adaptación a celulares */
+@media (max-width: 620px) {
+  .process-section {
+    padding: 3rem 1rem;
+  }
+
+  .process-heading {
+    margin-bottom: 1.75rem;
+  }
+
+  .process-section .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .process-section .step-card {
+    min-height: 0;
+    padding: 1.4rem;
+  }
+
+  .services-offer {
+    padding: 3rem 0;
+  }
+
+  .services-offer .service-panel {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .services-offer .service-block {
+    padding: 1.5rem;
+  }
+}
