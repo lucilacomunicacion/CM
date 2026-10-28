@@ -2410,66 +2410,117 @@ border: 1px solid var(--sage);
   }
 }
 
+
 /* =========================================
-   PORTADA — AJUSTE DE DISTRIBUCIÓN
+   PORTADA — ESTILO MINIMALISTA Y MODERNO
    ========================================= */
 
 #inicio.hero {
- padding: 3rem 0;
+  padding: clamp(3rem, 5vw, 5rem) 0;
   background: #f5f1e8;
 }
 
 #inicio .hero-grid {
+  display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
   align-items: center;
- gap: clamp(1.5rem, 3vw, 3rem);
+  gap: clamp(2rem, 5vw, 4.5rem);
 }
 
 #inicio .hero-copy {
-  max-width: 620px;
+  max-width: 650px;
   min-width: 0;
+  text-align: left;
 }
 
+/* Título en una sola línea */
 #inicio .hero-copy h1 {
-  margin-bottom: 1.25rem;
+  margin: 0 0 1.5rem;
+  color: #24382f;
   font-family: "Montserrat", sans-serif;
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
-  line-height: 1.15;
-  letter-spacing: -0.04em;
+  font-size: clamp(2rem, 3.2vw, 3.1rem);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.045em;
+  white-space: nowrap;
 }
 
 #inicio .hero-name {
   color: #54765d;
   font-style: italic;
+  font-weight: 600;
+}
+
+/* Presentación profesional */
+#inicio .hero-copy .lead,
+#inicio .hero-copy .lead-strong {
+  max-width: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: left;
+  letter-spacing: normal;
 }
 
 #inicio .hero-copy .lead {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
-  font-size: 0.98rem;
-  line-height: 1.75;
-  text-align: left;
+  color: #526458;
+  font-weight: 400;
 }
 
 #inicio .hero-copy .lead-strong {
-  margin-top: 1.25rem;
-  font-size: 1.04rem;
+  margin: 1.2rem 0 0;
+  color: #2d5945;
   font-weight: 600;
-  line-height: 1.8;
 }
 
+/* Botones */
 #inicio .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
-  margin-top: 1.75rem;
+  margin: 1.8rem 0 0;
 }
 
+#inicio .hero-actions .button {
+  min-height: 3rem;
+  padding: 0.8rem 1.35rem;
+  border-radius: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.92rem;
+  transition: background 0.2s ease, color 0.2s ease,
+              transform 0.2s ease;
+}
+
+#inicio .hero-actions .button-primary {
+  background: #2d5945;
+  border-color: #2d5945;
+  color: #fff;
+  box-shadow: none;
+}
+
+#inicio .hero-actions .button-primary:hover {
+  background: #1c382d;
+  transform: translateY(-2px);
+}
+
+#inicio .hero-actions .button-secondary {
+  background: transparent;
+  border-color: #2d5945;
+  color: #2d5945;
+}
+
+#inicio .hero-actions .button-secondary:hover {
+  background: #dfe9e1;
+  transform: translateY(-2px);
+}
+
+/* Video vertical: proporción original y sin recortes */
 #inicio .hero-visual {
-  min-width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-width: 0;
 }
 
 #inicio .video-box {
@@ -2478,17 +2529,19 @@ border: 1px solid var(--sage);
   margin: 0 auto;
   padding: 0;
   overflow: hidden;
-  border-radius: 20px;
+  border: none;
+  border-radius: 18px;
   background: transparent;
-  box-shadow: 0 16px 40px rgba(24, 41, 34, 0.10);
+  box-shadow: 0 14px 32px rgba(24, 41, 34, 0.12);
   line-height: 0;
 }
+
 #inicio .video-box video {
   display: block;
   width: 100%;
   height: auto;
   max-height: none;
-  object-fit: fill;
+  object-fit: contain;
   margin: 0;
   padding: 0;
   border: none;
@@ -2511,7 +2564,9 @@ border: 1px solid var(--sage);
   }
 
   #inicio .hero-copy h1 {
-    font-size: clamp(2.35rem, 8vw, 3.2rem);
+    font-size: clamp(1.8rem, 6vw, 2.7rem);
+    letter-spacing: -0.045em;
+    white-space: nowrap;
   }
 
   #inicio .hero-visual {
@@ -2523,7 +2578,11 @@ border: 1px solid var(--sage);
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 380px) {
+  #inicio .hero-copy h1 {
+    font-size: clamp(1.55rem, 7vw, 1.8rem);
+  }
+
   #inicio .hero-actions {
     gap: 0.6rem;
   }
