@@ -2872,3 +2872,15 @@ border: 1px solid var(--sage);
     letter-spacing: normal;
   }
 }
+/* Justificar los textos en celulares sin espacios excesivos */
+@media (max-width: 760px) {
+  #inicio .hero-copy .lead,
+  #inicio .hero-copy .lead-strong,
+  #contacto .contact-copy > p:not(.eyebrow) {
+    text-align: justify;
+    text-align-last: left;
+    hyphens: auto;
+    word-spacing: normal;
+    letter-spacing: normal;
+  }
+}
