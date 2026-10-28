@@ -2644,3 +2644,24 @@ border: 1px solid var(--sage);
   href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
   rel="stylesheet"
 />
+/* Logo LC: letras finas */
+.site-header .brand-mark {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.08em;
+}
+
+/* Nombre LUCILA: tipografía fina */
+.site-header .brand-copy strong {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Asegurar que Comunicación conserve Open Sans cursiva */
+.site-header .brand-copy small {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
