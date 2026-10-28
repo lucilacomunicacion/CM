@@ -2435,3 +2435,16 @@ body.lightbox-open {
   }
 }
 
+
+/* Corrección exclusiva de la sección Servicios */
+.services-offer {
+  background-color: var(--forest-deep);
+  color: var(--white);
+}
+
+.services-offer .services-heading,
+.services-offer .services-heading .eyebrow,
+.services-offer .services-heading h2 {
+  color: var(--white);
+  text-align: left;
+}
