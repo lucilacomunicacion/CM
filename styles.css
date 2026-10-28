@@ -2681,3 +2681,18 @@ border: 1px solid var(--sage);
   line-height: 1.25;
   color: #2d5945;
 }
+/* Alinear el subtítulo debajo de LUCILA */
+.site-header .brand-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-header .brand-copy strong {
+  text-align: center;
+}
+
+.site-header .brand-copy small {
+  text-align: center;
+  width: 100%;
+}
