@@ -2487,8 +2487,12 @@ border: 1px solid var(--sage);
   display: block;
   width: 100%;
   height: auto;
-  max-height: 70vh;
-  object-fit: contain;
+  max-height: none;
+  object-fit: fill;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
 }
 
 /* Tablet y celular */
