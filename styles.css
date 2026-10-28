@@ -2226,30 +2226,24 @@ body.lightbox-open {
 }
 
 
+
 /* =========================================
    CÓMO TRABAJO Y SERVICIOS
    ========================================= */
 
-/* Fondo general */
 .services-section {
   padding: 0;
   background: var(--background);
 }
 
-/* CÓMO TRABAJO: verde claro */
+/* CÓMO TRABAJO: fondo verde claro */
 .process-section {
-  position: relative;
   margin: 0;
   padding: 4.5rem 0;
   background: var(--sage-soft);
   color: var(--text);
-  box-shadow: 0 0 0 100vmax var(--sage-soft);
-  clip-path: inset(0 -100vmax);
 }
 
-
-
-/* Título Cómo trabajo */
 .process-heading {
   margin: 0 0 2.5rem;
   text-align: left;
@@ -2260,7 +2254,7 @@ body.lightbox-open {
   text-align: left;
 }
 
-/* Cuatro tarjetas iguales */
+/* Cuatro tarjetas del proceso */
 .process-section .steps-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2272,7 +2266,6 @@ body.lightbox-open {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  box-sizing: border-box;
   width: 100%;
   min-width: 0;
   min-height: 270px;
@@ -2300,43 +2293,42 @@ body.lightbox-open {
 }
 
 .process-section .step-card h3 {
+  margin: 0 0 0.8rem;
   color: var(--forest-deep);
   font-family: "Montserrat", sans-serif;
   font-size: 1.08rem;
   line-height: 1.4;
-  margin: 0 0 0.8rem;
 }
 
 .process-section .step-card p {
+  margin: 0;
   color: var(--text-soft);
   font-size: 0.94rem;
   line-height: 1.7;
-  margin: 0;
 }
 
-/* SERVICIOS: verde oscuro */
+/* SERVICIOS: fondo verde oscuro */
 .services-offer {
-  position: relative;
   margin: 0;
   padding: 4.5rem 0;
   background: var(--forest-deep);
   color: var(--white);
-  box-shadow: 0 0 0 100vmax var(--forest-deep);
-  clip-path: inset(0 -100vmax);
 }
 
-/* Título Servicios */
+/* Título de Servicios */
 .services-heading {
   margin: 0 0 2rem;
   text-align: left;
 }
 
-.services-heading h2 {
+.services-offer .services-heading,
+.services-offer .services-heading .eyebrow,
+.services-offer .services-heading h2 {
   color: var(--white);
   text-align: left;
 }
 
-/* Dos tarjetas claras */
+/* Dos tarjetas de servicios */
 .services-offer .service-panel {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2345,7 +2337,6 @@ body.lightbox-open {
 }
 
 .services-offer .service-block {
-  box-sizing: border-box;
   width: 100%;
   min-width: 0;
   height: 100%;
@@ -2358,24 +2349,24 @@ body.lightbox-open {
 }
 
 .services-offer .service-block h3 {
+  margin-bottom: 1.4rem;
   color: var(--forest-deep);
   font-family: "Montserrat", sans-serif;
   font-size: 1.3rem;
   line-height: 1.4;
-  margin-bottom: 1.4rem;
 }
 
 .services-offer .check-list li {
-  line-height: 1.65;
   margin-bottom: 0.65rem;
+  line-height: 1.65;
 }
 
-/* Ocultar las etiquetas pequeñas, conservar los títulos */
+/* Ocultar etiquetas pequeñas */
 .service-label {
   display: none;
 }
 
-/* Tablet */
+/* TABLET */
 @media (max-width: 960px) {
   .process-section,
   .services-offer {
@@ -2391,7 +2382,7 @@ body.lightbox-open {
   }
 }
 
-/* Celulares */
+/* CELULARES */
 @media (max-width: 620px) {
   .process-section,
   .services-offer {
@@ -2418,27 +2409,3 @@ body.lightbox-open {
   }
 }
 
-
-/* Corrección exclusiva de la sección Servicios */
-.services-offer {
-  background-color: var(--forest-deep);
-  color: var(--white);
-}
-
-.services-offer .services-heading,
-.services-offer .services-heading .eyebrow,
-.services-offer .services-heading h2 {
-  color: var(--white);
-  text-align: left;
-}
-/* Evitar que la web se ensanche horizontalmente */
-html,
-body {
-  max-width: 100%;
-  overflow-x: clip;
-}
-
-.container {
-  width: min(var(--container), calc(100% - 2rem));
-  margin-inline: auto;
-}
