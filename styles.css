@@ -2662,6 +2662,10 @@ border: 1px solid var(--sage);
 /* Asegurar que Comunicación conserve Open Sans cursiva */
 .site-header .brand-copy small {
   font-family: "Open Sans", sans-serif;
-  font-weight: 400;
+  font-size: 0.82rem;
   font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  line-height: 1.25;
+  color: #2d5945;
 }
