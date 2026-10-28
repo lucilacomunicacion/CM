@@ -2239,30 +2239,15 @@ body.lightbox-open {
 /* CÓMO TRABAJO: verde claro */
 .process-section {
   position: relative;
-  isolation: isolate;
   margin: 0;
   padding: 4.5rem 0;
   background: var(--sage-soft);
   color: var(--text);
+  box-shadow: 0 0 0 100vmax var(--sage-soft);
+  clip-path: inset(0 -100vmax);
 }
 
-/* Fondo de ancho completo, sin ampliar el contenido */
-.process-section::before,
-.services-offer::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 100vw;
-  transform: translateX(-50%);
-}
 
-/* Verde claro continuo */
-.process-section::before {
-  background: var(--sage-soft);
-}
 
 /* Título Cómo trabajo */
 .process-heading {
@@ -2332,14 +2317,12 @@ body.lightbox-open {
 /* SERVICIOS: verde oscuro */
 .services-offer {
   position: relative;
-  isolation: isolate;
   margin: 0;
   padding: 4.5rem 0;
   background: var(--forest-deep);
-}
-
-.services-offer::before {
-  background: var(--forest-deep);
+  color: var(--white);
+  box-shadow: 0 0 0 100vmax var(--forest-deep);
+  clip-path: inset(0 -100vmax);
 }
 
 /* Título Servicios */
