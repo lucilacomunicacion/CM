@@ -2862,3 +2862,13 @@ border: 1px solid var(--sage);
   overflow-wrap: break-word;
   line-height: 1.7;
 }
+/* Corregir la separación entre palabras en celulares */
+@media (max-width: 760px) {
+  #inicio .hero-copy .lead,
+  #inicio .hero-copy .lead-strong,
+  #contacto .contact-copy > p:not(.eyebrow) {
+    text-align: left;
+    word-spacing: normal;
+    letter-spacing: normal;
+  }
+}
