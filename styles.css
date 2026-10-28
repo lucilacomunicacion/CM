@@ -2592,3 +2592,51 @@ border: 1px solid var(--sage);
     font-size: 0.88rem;
   }
 }
+
+/* DETALLES GRAFICOS DECORATIVOS DE LA PORTADA */
+#inicio .hero-copy {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Trazo orgánico decorativo */
+#inicio .hero-copy::before {
+  content: "";
+  position: absolute;
+  top: -1.8rem;
+  left: 0.15rem;
+  width: 48px;
+  height: 12px;
+  border-top: 3px solid #8fa78b;
+  border-radius: 50%;
+  transform: rotate(-12deg);
+  pointer-events: none;
+}
+
+/* Pequeño círculo decorativo */
+#inicio .hero-copy::after {
+  content: "";
+  position: absolute;
+  top: -1.65rem;
+  left: 3.8rem;
+  width: 9px;
+  height: 9px;
+  border: 2px solid #c4a989;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Adaptación para celular */
+@media (max-width: 760px) {
+  #inicio .hero-copy::before {
+    top: -1.4rem;
+    width: 40px;
+  }
+
+  #inicio .hero-copy::after {
+    top: -1.3rem;
+    left: 3.2rem;
+    width: 7px;
+    height: 7px;
+  }
+}
