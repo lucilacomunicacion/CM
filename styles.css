@@ -2853,3 +2853,12 @@ border: 1px solid var(--sage);
     height: 42px;
   }
 }
+/* Ajustar el texto descriptivo de Contacto en la web */
+#contacto .contact-copy > p:not(.eyebrow) {
+  max-width: 420px;
+  margin-left: 0;
+  margin-right: auto;
+  text-align: left;
+  overflow-wrap: break-word;
+  line-height: 1.7;
+}
