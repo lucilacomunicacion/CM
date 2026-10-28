@@ -2720,3 +2720,32 @@ border: 1px solid var(--sage);
   text-align: center;
   width: 100%;
 }
+
+/* Alinear la sección de contacto en celulares */
+@media (max-width: 760px) {
+  #contacto .contact-wrap {
+    text-align: center;
+  }
+
+  #contacto .contact-copy {
+    text-align: center;
+  }
+
+  #contacto .contact-copy .eyebrow,
+  #contacto .contact-copy h2 {
+    text-align: center;
+  }
+
+  #contacto .contact-copy > p:not(.eyebrow) {
+    text-align: justify;
+  }
+
+  #contacto .contact-card {
+    align-items: center;
+    text-align: center;
+  }
+
+  #contacto .contact-socials {
+    justify-content: center;
+  }
+}
