@@ -2942,3 +2942,19 @@ border: 1px solid var(--sage);
   background: #F2F5F0 !important;
   color: #2D5945 !important;
 }
+/* Reducir el espacio vertical del inicio en PC */
+@media (min-width: 761px) {
+  #inicio.hero {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  #inicio .video-box {
+    width: 260px;
+    max-width: 100%;
+  }
+
+  #inicio .hero-grid {
+    align-items: center;
+  }
+}
