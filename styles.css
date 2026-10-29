@@ -2981,34 +2981,7 @@ border: 1px solid var(--sage);
     align-items: center;
   }
 }
-/* Transición suave entre Inicio y Proyectos */
+/* Separación entre Inicio y Proyectos */
 #inicio.hero {
-  position: relative;
-  isolation: isolate;
-  overflow: visible;
-  margin-bottom: 0;
-}
-
-/* Transición difuminada entre Inicio y Proyectos */
-#inicio.hero {
-  position: relative;
-  isolation: isolate;
-}
-
-#inicio.hero::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 120px;
-  pointer-events: none;
-  background: linear-gradient(
-    to bottom,
-    rgba(45, 89, 69, 0) 0%,
-    rgba(45, 89, 69, 0.12) 25%,
-    rgba(223, 233, 225, 0.55) 65%,
-    #f2f5f0 100%
-  );
+  border-bottom: 1px solid #d5ddd3;
 }
