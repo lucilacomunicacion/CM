@@ -2918,3 +2918,27 @@ border: 1px solid var(--sage);
   background-color: #7FA68A;
   border-color: #7FA68A;
 }
+/* Forzar colores de los botones del inicio */
+#inicio .hero-actions a.button.button-primary {
+  background: #F2F5F0 !important;
+  color: #2D5945 !important;
+  border: 1px solid #F2F5F0 !important;
+}
+
+#inicio .hero-actions a.button.button-secondary {
+  background: transparent !important;
+  color: #F2F5F0 !important;
+  border: 1px solid #F2F5F0 !important;
+}
+
+/* Colores al pasar el mouse */
+#inicio .hero-actions a.button.button-primary:hover {
+  background: #7FA68A !important;
+  color: #2D5945 !important;
+  border-color: #7FA68A !important;
+}
+
+#inicio .hero-actions a.button.button-secondary:hover {
+  background: #F2F5F0 !important;
+  color: #2D5945 !important;
+}
