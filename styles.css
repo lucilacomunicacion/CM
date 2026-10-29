@@ -2884,3 +2884,14 @@ border: 1px solid var(--sage);
     letter-spacing: normal;
   }
 }
+/* Inicio con la identidad visual de Lucila Comunicación */
+#inicio.hero {
+  background-color: #2D5945;
+}
+
+#inicio .hero-copy h1,
+#inicio .hero-copy .hero-name,
+#inicio .hero-copy .lead,
+#inicio .hero-copy .lead-strong {
+  color: #F2F5F0;
+}
