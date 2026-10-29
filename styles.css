@@ -2906,3 +2906,15 @@ border: 1px solid var(--sage);
   color: #2D5945;
   background-color: #F2F5F0;
 }
+/* Botón principal del inicio */
+#inicio .button-primary {
+  color: #2D5945;
+  background-color: #F2F5F0;
+  border: 1px solid #F2F5F0;
+}
+
+#inicio .button-primary:hover {
+  color: #2D5945;
+  background-color: #7FA68A;
+  border-color: #7FA68A;
+}
