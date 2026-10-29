@@ -2958,3 +2958,26 @@ border: 1px solid var(--sage);
     align-items: center;
   }
 }
+/* Compactar el bloque de presentación en escritorio */
+@media (min-width: 761px) {
+  #inicio .hero-copy h1 {
+    margin-bottom: 1rem;
+  }
+
+  #inicio .hero-copy .lead {
+    margin-bottom: 0.8rem;
+  }
+
+  #inicio .hero-copy .lead-strong {
+    margin-top: 0;
+    margin-bottom: 1.4rem;
+  }
+
+  #inicio .hero-actions {
+    margin-top: 0;
+  }
+
+  #inicio .hero-grid {
+    align-items: center;
+  }
+}
