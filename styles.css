@@ -2989,20 +2989,26 @@ border: 1px solid var(--sage);
   margin-bottom: 0;
 }
 
+/* Transición difuminada entre Inicio y Proyectos */
+#inicio.hero {
+  position: relative;
+  isolation: isolate;
+}
+
 #inicio.hero::after {
   content: "";
   position: absolute;
   z-index: -1;
   left: 0;
   right: 0;
-  bottom: -70px;
-  height: 100px;
+  bottom: -1px;
+  height: 120px;
   pointer-events: none;
   background: linear-gradient(
     to bottom,
-    #2D5945 0%,
-    rgba(45, 89, 69, 0.75) 25%,
-    rgba(127, 166, 138, 0.35) 65%,
-    rgba(242, 245, 240, 0) 100%
+    rgba(45, 89, 69, 0) 0%,
+    rgba(45, 89, 69, 0.12) 25%,
+    rgba(223, 233, 225, 0.55) 65%,
+    #f2f5f0 100%
   );
 }
