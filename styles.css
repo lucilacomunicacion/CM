@@ -2895,3 +2895,14 @@ border: 1px solid var(--sage);
 #inicio .hero-copy .lead-strong {
   color: #F2F5F0;
 }
+/* Botón secundario del inicio */
+#inicio .button-secondary {
+  color: #F2F5F0;
+  border: 1px solid #F2F5F0;
+  background-color: transparent;
+}
+
+#inicio .button-secondary:hover {
+  color: #2D5945;
+  background-color: #F2F5F0;
+}
